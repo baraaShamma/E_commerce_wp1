@@ -15,12 +15,10 @@ function addToCart(name, price, img) {
 
   // Save the updated cart back to localStorage
   localStorage.setItem('cart', JSON.stringify(cart));
+  event.preventDefault();
+
 }
 
-function redirectToProductPage(image, name, price, description) {
-  // توجيه المستخدم إلى صفحة المنتج وإرسال المعلومات
-  window.location.href = "product_detail.html?image=" + image + "&name=" + name + "&price=" + price + "&description=" + description;
-}
 
 // Function to display cart items
 function displayCart() {
